@@ -1,20 +1,20 @@
 #### general settings
 name: output_GPEMSR_x8
 scale: 8
-save_path: /GPEMSR-CREMI/GPEMSR/dataset/CREMI/test/SR/x8
-pretrain_path: /GPEMSR-CREMI/GPEMSR/pre-train_model/stage3_x8.pth
+save_path: /content/GPEMSR/GPEMSR-CREMI/GPEMSR/cremi_data/orig
+pretrain_path: /content/drive/MyDrive/GPEMSR/CREMI/stage3_x8.pth
 dataset:
   name: CREMIDataset
   mode: val
-  dataroot_GT: /GPEMSR-CREMI/GPEMSR/dataset/CREMI/test/HR/x8
-  dataroot_LQ: /GPEMSR-CREMI/GPEMSR/dataset/CREMI/test/LR/x8
+  dataroot_GT: /content/GPEMSR/GPEMSR-CREMI/GPEMSR/cremi_data/orig
+  dataroot_LQ: /content/GPEMSR/GPEMSR-CREMI/GPEMSR/cremi_data/orig
   N_frames: 5
   phase: val
 
 #### network structures
 network:
-  ref_path_G: /GPEMSR-CREMI/GPEMSR/pre-train_model/stage1.pth
-  ref_path_Indexer: /GPEMSR-CREMI/GPEMSR/pre-train_model/stage2_x8.pth
+  ref_path_G: /content/drive/MyDrive/GPEMSR/CREMI/stage1.pth
+  ref_path_Indexer: /content/drive/MyDrive/GPEMSR/CREMI/stage2_x8.pth
   nf: 64
   nframes: 5
   groups: 8
