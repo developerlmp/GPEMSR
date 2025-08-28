@@ -62,7 +62,7 @@ def extract_image_patches(images, ksizes, strides, rates, padding='same'):
 
 
 class POD(nn.Module):
-    def __init__(self,spynet_path = '/GPEMSR-CREMI/GPEMSR/pre-train_model/spynet_sintel_final-3d2a1287.pth',nf=64, groups=8):
+    def __init__(self,spynet_path = '/content/drive/MyDrive/GPEMSR/CREMI/spynet_sintel_final-3d2a1287.pth',nf=64, groups=8):
         super(POD, self).__init__()
         self.spynet = SpyNet(spynet_path)
         for k,v in self.spynet.named_parameters():
