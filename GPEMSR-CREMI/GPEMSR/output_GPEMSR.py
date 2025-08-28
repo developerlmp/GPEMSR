@@ -149,7 +149,7 @@ class CREMIDataset(data.Dataset):
         self.GT_list = []
         ls_cur = []
         for i in os.listdir(self.GT_root):
-            ls_cur.append(int(i[:-4]))
+            ls_cur.append(i[:-4])
         ls_cur.sort()
         for GT_path in ls_cur[int((self.N_frames - 1) / 2):int(-(self.N_frames - 1) / 2)]:
             self.GT_list.append(os.path.join(self.GT_root, str(GT_path) + '.png'))
