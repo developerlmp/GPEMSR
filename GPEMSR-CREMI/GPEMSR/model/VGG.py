@@ -8,7 +8,7 @@ class VGG19(nn.Module):
     def __init__(self, requires_grad=False):
         super(VGG19, self).__init__()
         vgg_model = vgg.vgg19(pretrained=False)
-        pretrain_path = '/GPEMSR-CREMI/GPEMSR/pre-train_model/vgg19-dcbb9e9d.pth'
+        pretrain_path = '/content/drive/MyDrive/GPEMSR/CREMI/vgg19-dcbb9e9d.pth'
         vgg_model.load_state_dict(torch.load(pretrain_path),strict=True)
         vgg_pretrained_features = vgg_model.features
 
